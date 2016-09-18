@@ -22,9 +22,11 @@ const Header=()=>{
           <Link to="/courses" activeClassName="active">Courses</Link>
         </NavItem>
         <NavDropdown eventKey={3} title="Registration" id="basic-nav-dropdown">
-          <MenuItem eventKey={3.1}>Clients</MenuItem>
+          <MenuItem eventKey={3.1}><Link to="/clients" activeClassName="active">Clients</Link></MenuItem>
           <MenuItem divider />
-          <MenuItem eventKey={3.2}>Contributor</MenuItem>          
+          <MenuItem eventKey={3.2}>Contributor</MenuItem>
+          <MenuItem divider />  
+          <MenuItem eventKey={3.3}><Link to="/employees" activeClassName="active">Employees</Link></MenuItem>        
         </NavDropdown>
         <NavItem eventKey={3}>
           <Link to="/about" activeClassName="active">About
