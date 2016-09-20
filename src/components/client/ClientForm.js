@@ -1,7 +1,7 @@
 import React,{PropTypes} from 'react';
 import TextInput from '../common/TextInput';
 
-const ClientForm=({client,onSave,onChange,loading,errors})=>{
+const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
   return (
     <form>
       <h1>Manage client</h1>
@@ -20,7 +20,7 @@ const ClientForm=({client,onSave,onChange,loading,errors})=>{
               <button type="button" className="btn btn-default">
                 <span className="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span>&nbsp;Load Contribution
               </button>
-              <button type="button" className="btn btn-default">
+              <button type="button" className="btn btn-default" onClick={visitEmployees} >
                 <span className="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Employees
               </button>
             </div>
@@ -117,7 +117,8 @@ ClientForm.propTypes={
   onSave:PropTypes.func.isRequired,
   onChange:PropTypes.func.isRequired,
   loading:PropTypes.bool.isRequired,
-  errors:PropTypes.object.isRequired
+  errors:PropTypes.object.isRequired,
+  visitEmployees:PropTypes.func.isRequired
 };
 
 export default ClientForm;

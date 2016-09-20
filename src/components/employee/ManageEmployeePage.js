@@ -28,7 +28,7 @@ class ManageEmployeePage extends React.Component{
   saveEmployee(event){
     event.preventDefault();
     this.props.actions.saveEmployee(this.state.employee);
-    this.context.router.push('/employees');
+    this.context.router.push('/employees/'+this.props.employer);
   }
   render(){
     return(
@@ -63,12 +63,15 @@ function mapStateToProps(state,ownProps){
     employee=getEmployeeById(state.employees,employeeId,employer);
   }
   return {
-    employee:employee
+    employee:employee,
+    employer:employer
   };
 }
 ManageEmployeePage.propTypes={
     employee:PropTypes.object.isRequired,
+    employer:PropTypes.string.isRequired,
     actions:PropTypes.object.isRequired
+
 };
 ManageEmployeePage.contextTypes={
   router:PropTypes.object.isRequired

@@ -128,10 +128,13 @@ const generateId = (employee) => {
 };
 
 class EmployeeApi {
-  static getAllEmployees() {
+  static getAllEmployees(employer) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(Object.assign([], employees));
+        console.log("employer",employer);
+        const client_employees=employees.filter(employee=>employee.employer===employer);
+        console.log("client_employees",client_employees);
+        resolve(Object.assign([], client_employees));
       }, delay);
     });
   }

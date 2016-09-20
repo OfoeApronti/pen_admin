@@ -21,7 +21,7 @@ export default (
     <Route path="clients" component={ClientsPage} />
     <Route path="client" component={ManageClientPage} />
     <Route path="client/:id" component={ManageClientPage} />
-    <Route path="employees" component={EmployeesPage} />
+    <Route path="employees/:employer" component={EmployeesPage} />
     <Route path="employee" component={ManageEmployeePage} />
     <Route path="employee/:id/:employer" component={ManageEmployeePage} />
   </Route>

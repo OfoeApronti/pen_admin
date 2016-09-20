@@ -10,9 +10,10 @@ export function createEmployeeSuccess(employee){
   return {type:types.UPDATE_EMPLOYEE_SUCCESS,employee};
 }
 
-export function loadEmployees(){
+export function loadEmployees(employer){
+  console.log("loadEmployees(employer)",employer);
   return function(dispatch){
-    return employeeApi.getAllEmployees().then(employees=>{
+    return employeeApi.getAllEmployees(employer).then(employees=>{
       dispatch(loadEmployeesSuccess(employees));
     }).catch(error=>{
       throw(error);

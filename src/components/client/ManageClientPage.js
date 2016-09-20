@@ -13,6 +13,7 @@ class ManageClientPage extends React.Component{
     };
     this.updateClientState=this.updateClientState.bind(this);
     this.saveClient=this.saveClient.bind(this);
+    this.visitEmployees=this.visitEmployees.bind(this);
   }
   componentWillReceiveProps(nextProps){
     if(this.props.client.id!=nextProps.client.id){
@@ -24,6 +25,11 @@ class ManageClientPage extends React.Component{
     let client=this.state.client;
     client[field]=event.target.value;
     return this.setState({client:client});
+  }
+  visitEmployees(){
+    if (this.state.client.id && this.state.client.id.length>0){
+      this.context.router.push('/employees/'+this.state.client.id);
+    }
   }
   saveClient(event){
     event.preventDefault();
@@ -40,6 +46,7 @@ class ManageClientPage extends React.Component{
         onChange={this.updateClientState}
         onSave={this.saveClient}
         errors={this.state.errors}
+        visitEmployees={this.visitEmployees}
         />
       </div>
     );

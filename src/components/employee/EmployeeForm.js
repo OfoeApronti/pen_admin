@@ -88,7 +88,7 @@ const EmployeeForm=({employee,onSave,onChange,loading,errors})=>{
             <TextInput
                 name="email"
                 label="Email"
-                value={employee.phone}
+                value={employee.email}
                 onChange={onChange}
                 error={errors.email}
                 />
