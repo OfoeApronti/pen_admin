@@ -13,6 +13,8 @@ class ManageEmployeePage extends React.Component{
     };
     this.updateEmployeeState=this.updateEmployeeState.bind(this);
     this.saveEmployee=this.saveEmployee.bind(this);
+    this.fundEvents=this.fundEvents.bind(this);
+    
   }
   componentWillReceiveProps(nextProps){
     if(this.props.employee.id!=nextProps.employee.id){
@@ -28,7 +30,13 @@ class ManageEmployeePage extends React.Component{
   saveEmployee(event){
     event.preventDefault();
     this.props.actions.saveEmployee(this.state.employee);
-    this.context.router.push('/employees/'+this.props.employer);
+    this.context.router.push('/employees/'+this.state.employee.employer);
+  }
+  fundEvents(){
+    let id=this.state.employee.id;
+    let name=this.state.employee.name;
+    let employer=this.state.employee.employer;
+    this.context.router.push('/fundevents/'+id+'/'+employer+'/'+name);
   }
   render(){
     return(
@@ -40,6 +48,7 @@ class ManageEmployeePage extends React.Component{
         onChange={this.updateEmployeeState}
         onSave={this.saveEmployee}
         errors={this.state.errors}
+        fundEvents={this.fundEvents}
         />
       </div>
     );

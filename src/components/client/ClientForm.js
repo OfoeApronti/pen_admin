@@ -8,19 +8,19 @@ const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
         <div className="row">
           <div className="col-md-12">
             <div className="btn-group" role="group" aria-label="...">
-              <button type="button" className="btn btn-default"> 
+              <button type="button" className="btn btn-info"> 
                 <span className="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;Fund Events
               </button>
-              <button type="button" className="btn btn-default">
+              <button type="button" className="btn btn-success ">
                 <span className="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>&nbsp;Share Interest
               </button>
-              <button type="button" className="btn btn-default">
-                <span className="glyphicon glyphicon-signal" aria-hidden="true"></span>&nbsp;Liquidate
+              <button type="button" className="btn btn-default btn-danger">
+                <span className="glyphicon glyphicon-signal " aria-hidden="true"></span>&nbsp;Liquidate
               </button>
-              <button type="button" className="btn btn-default">
+              <button type="button" className="btn btn-primary">
                 <span className="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span>&nbsp;Load Contribution
               </button>
-              <button type="button" className="btn btn-default" onClick={visitEmployees} >
+              <button type="button" className="btn btn-info" onClick={visitEmployees} >
                 <span className="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Employees
               </button>
             </div>

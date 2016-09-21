@@ -1,17 +1,17 @@
 import React,{PropTypes} from 'react';
 import TextInput from '../common/TextInput';
 
-const EmployeeForm=({employee,onSave,onChange,loading,errors})=>{
+const EmployeeForm=({employee,onSave,onChange,loading,errors,fundEvents})=>{
   return (
     <form>
-      <h1>Manage employee</h1>
+      <h1 className="text-capitalize">{employee.name}</h1>
         <div className="row">
           <div className="col-md-12">
             <div className="btn-group" role="group" aria-label="...">
-              <button type="button" className="btn btn-default"> 
+              <button type="button" className="btn btn-info" onClick={fundEvents}> 
                 <span className="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;Fund Events
               </button>
-              <button type="button" className="btn btn-default">
+              <button type="button" className="btn btn-danger">
                 <span className="glyphicon glyphicon-signal" aria-hidden="true"></span>&nbsp;Liquidate
               </button>
             </div>
@@ -118,6 +118,7 @@ EmployeeForm.propTypes={
   employee:PropTypes.object.isRequired,
   onSave:PropTypes.func.isRequired,
   onChange:PropTypes.func.isRequired,
+  fundEvents:PropTypes.func.isRequired,
   loading:PropTypes.bool.isRequired,
   errors:PropTypes.object.isRequired
 };

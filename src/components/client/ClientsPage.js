@@ -17,10 +17,24 @@ class ClientsPage extends React.Component{
     return (
       <div>
         <h1> Clients </h1>
-        <input type="submit"
-          value="Add Client"
-          className="btn btn-primary"
-          onClick={this.redirectToAddClientPage} />
+
+        <div className="row">  
+          <div className="col-md-6">
+            <input type="submit"
+              value="Add Client"
+              className="btn btn-primary"
+              onClick={this.redirectToAddClientPage} />
+          </div>
+          <div className="col-md-6">
+            <div className="input-group">
+              <input type="text" className="form-control" placeholder="Search for client..."></input>
+              <span className="input-group-btn">
+                <button className="btn btn-default" type="button">Go!</button>
+              </span>
+            </div>
+          </div>
+      </div>
+
         <ClientList clients={clients} />
       </div>
     );

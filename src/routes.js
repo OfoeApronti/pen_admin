@@ -8,6 +8,7 @@ import ManageCoursePage from './components/course/ManageCoursePage';
 import ClientsPage from './components/client/ClientsPage';
 import ManageClientPage from './components/client/ManageClientPage';
 import EmployeesPage from './components/employee/EmployeesPage';
+import FundEventsPage from './components/fundEvent/FundEventsPage';
 import ManageEmployeePage from './components/employee/ManageEmployeePage';
 //eslint-disable-line import/no-named-as-default
 
@@ -22,6 +23,7 @@ export default (
     <Route path="client" component={ManageClientPage} />
     <Route path="client/:id" component={ManageClientPage} />
     <Route path="employees/:employer" component={EmployeesPage} />
+    <Route path="fundevents/:id/:employer/:name" component={FundEventsPage} />
     <Route path="employee" component={ManageEmployeePage} />
     <Route path="employee/:id/:employer" component={ManageEmployeePage} />
   </Route>
