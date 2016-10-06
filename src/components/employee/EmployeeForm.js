@@ -26,6 +26,7 @@ const EmployeeForm=({employee,onSave,onChange,loading,errors,fundEvents})=>{
               value={employee.id}
               onChange={onChange}
               error={errors.id}
+              type="text"
               />
           </div>
           <div className="col-md-6">
@@ -35,6 +36,7 @@ const EmployeeForm=({employee,onSave,onChange,loading,errors,fundEvents})=>{
               value={employee.name}
               onChange={onChange}
               error={errors.name}
+              type="text"
               />
           </div>
         </div>
@@ -44,6 +46,7 @@ const EmployeeForm=({employee,onSave,onChange,loading,errors,fundEvents})=>{
         value={employee.employer}
         onChange={onChange}
         error={errors.employer}
+        type="text"
         />
     <div className="row">
       <div className="col-md-4 col-ms-12">
@@ -53,6 +56,7 @@ const EmployeeForm=({employee,onSave,onChange,loading,errors,fundEvents})=>{
             value={employee.nok}
             onChange={onChange}
             error={errors.nok}
+            type="text"
             />
       </div>
       <div className="col-md-4 col-ms-12">
@@ -62,6 +66,7 @@ const EmployeeForm=({employee,onSave,onChange,loading,errors,fundEvents})=>{
               value={employee.ssnit}
               onChange={onChange}
               error={errors.ssnit}
+              type="text"
               />
         </div>
         <div className="col-md-4 col-ms-12">
@@ -71,6 +76,7 @@ const EmployeeForm=({employee,onSave,onChange,loading,errors,fundEvents})=>{
             value={employee.dob}
             onChange={onChange}
             error={errors.dob}
+            type="text"
             />
         </div>
       </div>
@@ -82,6 +88,7 @@ const EmployeeForm=({employee,onSave,onChange,loading,errors,fundEvents})=>{
                 value={employee.phone}
                 onChange={onChange}
                 error={errors.phone}
+                type="text"
                 />
           </div>
           <div className="col-md-4 col-ms-12">
@@ -91,6 +98,7 @@ const EmployeeForm=({employee,onSave,onChange,loading,errors,fundEvents})=>{
                 value={employee.email}
                 onChange={onChange}
                 error={errors.email}
+                type="text"
                 />
         </div>
         
@@ -101,6 +109,7 @@ const EmployeeForm=({employee,onSave,onChange,loading,errors,fundEvents})=>{
                 value={employee.initDate}
                 onChange={onChange}
                 error={errors.initDate}
+                type="text"
                 />
         </div>
         

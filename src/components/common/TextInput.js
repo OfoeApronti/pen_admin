@@ -10,7 +10,7 @@ const TextInput=({name,label,value,onChange,placeholder,error})=>{
       <label htmlFor={name}>{label}</label>
       <div className="field">
         <input 
-          text="text"
+          type={type}
           name={name}
           className="form-control"
           placeholder={placeholder}
@@ -27,6 +27,7 @@ TextInput.propTypes={
   onChange:PropTypes.func.isRequired,
   value:PropTypes.string,
   error:PropTypes.string,
+  type:PropTypes.string.isRequired,
   placeholder:PropTypes.string
 };
 export default TextInput;

@@ -16,6 +16,7 @@ const UserForm=({user,onSave,onChange,loading,errors})=>{
             value={user.email}
             onChange={onChange}
             error={errors.email}
+            type="text"
             />
           <TextInput
             name="name"
@@ -23,6 +24,7 @@ const UserForm=({user,onSave,onChange,loading,errors})=>{
             value={user.name}
             onChange={onChange}
             error={errors.name}
+            type="text"
             />
           
           <TextInput
@@ -31,6 +33,7 @@ const UserForm=({user,onSave,onChange,loading,errors})=>{
             value={user.role}
             onChange={onChange}
             error={errors.role}
+            type="text"
             />
           <input
             type="submit"

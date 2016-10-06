@@ -40,6 +40,7 @@ const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
               value={client.id}
               onChange={onChange}
               error={errors.id}
+              type="text"
               />
           </div>
           <div className="col-md-6">
@@ -49,6 +50,7 @@ const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
               value={client.name}
               onChange={onChange}
               error={errors.name}
+              type="text"
               />
           </div>
         </div>
@@ -58,6 +60,7 @@ const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
         value={client.address}
         onChange={onChange}
         error={errors.address}
+        type="text"
         />
     <div className="row">
       <div className="col-md-4 col-ms-12">
@@ -67,6 +70,7 @@ const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
             value={client.email}
             onChange={onChange}
             error={errors.email}
+            type="text"
             />
       </div>
       <div className="col-md-4 col-ms-12">
@@ -76,6 +80,7 @@ const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
             value={client.phone}
             onChange={onChange}
             error={errors.phone}
+            type="text"
             />
         </div>
       </div>
@@ -87,6 +92,7 @@ const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
               value={client.rm}
               onChange={onChange}
               error={errors.rm}
+              type="text"
               />
             </div>
         <div className="col-md-4 col-ms-12"> 
@@ -96,6 +102,7 @@ const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
                 value={client.initDate}
                 onChange={onChange}
                 error={errors.initDate}
+                type="text"
                 />
         </div>
           <div className="col-md-4 col-ms-12">
@@ -105,6 +112,7 @@ const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
                 value={client.fundType}
                 onChange={onChange}
                 error={errors.fundType}
+                type="text"
                 />
           </div>
         </div>
