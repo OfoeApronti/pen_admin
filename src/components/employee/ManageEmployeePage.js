@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as employeeActions from '../../actions/employeeActions';
 import EmployeeForm from './EmployeeForm';
+import {Link} from "react-router";
 
 class ManageEmployeePage extends React.Component{
   constructor(props,context){
@@ -39,9 +40,17 @@ class ManageEmployeePage extends React.Component{
     this.context.router.push('/fundevents/'+id+'/'+employer+'/'+name);
   }
   render(){
+    let id=this.state.employee.id;
+    let name=this.state.employee.name;
+    let employer=this.state.employee.employer;
     return(
       <div>
-        
+        <ol className="breadcrumb">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/clients">Clients</Link></li>
+          <li><Link to={"/employees/"+this.state.employee.employer}>Employees</Link></li>
+          <li className="active">Employee Details</li>
+        </ol>
 
         <EmployeeForm 
         employee={this.state.employee}

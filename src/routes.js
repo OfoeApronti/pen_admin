@@ -10,6 +10,8 @@ import ManageClientPage from './components/client/ManageClientPage';
 import EmployeesPage from './components/employee/EmployeesPage';
 import FundEventsPage from './components/fundEvent/FundEventsPage';
 import ManageEmployeePage from './components/employee/ManageEmployeePage';
+import ManageUserPage from './components/user/ManageUserPage';
+import UsersPage from './components/user/UsersPage';
 //eslint-disable-line import/no-named-as-default
 
 export default (
@@ -26,5 +28,8 @@ export default (
     <Route path="fundevents/:id/:employer/:name" component={FundEventsPage} />
     <Route path="employee" component={ManageEmployeePage} />
     <Route path="employee/:id/:employer" component={ManageEmployeePage} />
+    <Route path="user" component={ManageUserPage} />
+    <Route path="user/:email" component={ManageUserPage} />
+    <Route path="users" component={UsersPage} />
   </Route>
 );

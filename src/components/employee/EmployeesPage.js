@@ -26,6 +26,11 @@ class EmployeesPage extends React.Component{
     const {employees}=this.props;
     return (
       <div>
+        <ol className="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/clients">Clients</a></li>
+          <li className="active">Employees</li>
+        </ol>
         <h1> Staff of {this.props.employer.toUpperCase()} </h1>
         <input type="submit"
           value="Add Employee"

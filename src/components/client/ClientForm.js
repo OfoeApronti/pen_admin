@@ -4,6 +4,11 @@ import TextInput from '../common/TextInput';
 const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
   return (
     <form>
+      <ol className="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/clients">Clients</a></li>
+        <li className="active">Client Details</li>
+      </ol>
       <h1>Manage client</h1>
         <div className="row">
           <div className="col-md-12">

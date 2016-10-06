@@ -6,7 +6,7 @@ const FundEventsListRow=({event})=>{
     <tr>
       <td><Link to={'/fundEvents/'+event.id+'/'+event.employer+'/'+event.events}>Details</Link></td>
       <td>{event.period}</td>
-      <td>{event.events}</td>
+      <td>{event.event}</td>
       <td>{event.employer_amt}</td>
       <td>{event.employee_amt}</td>
       <td>{event.avc}</td>

@@ -16,6 +16,10 @@ class ClientsPage extends React.Component{
     const {clients}=this.props;
     return (
       <div>
+        <ol className="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li className="active">Clients</li>
+        </ol>                                 
         <h1> Clients </h1>
 
         <div className="row">  
