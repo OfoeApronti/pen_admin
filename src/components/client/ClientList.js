@@ -3,7 +3,7 @@ import ClientListRow from './ClientListRow';
 
 const ClientList=({clients})=> {
   return (
-    <table className="table">
+    <table className="table table-condensed">
       <thead>
         <tr>
           <th>&nbsp;</th>

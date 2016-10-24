@@ -19,25 +19,21 @@ export function loadUsers(){
     }).catch(error=>{
       throw(error);
     });*/
-    return axios.get("http://localhost:4000/users")
+    return axios.get("http://localhost/api/users")
     .then(response=>{
       let users=[];
       users=response.data;
-      console.log("u",users);
       dispatch(loadUsersSuccess(users));
     }).catch(error=>{
-      console.log("error",error);
+      throw(error);
     });
   };
 }
 export function saveUser(user){
-  console.log("action.saveUser called",user);
   return function(dispatch){
     return userApi.saveUser(user).then(user=>{
-      console.log("action.saveUser success",user);
       user.id ? dispatch(updateUserSuccess(user)):dispatch(createUserSuccess(user));
     }).catch(error=>{
-      console.log("action.saveUser failure",user);
       throw(error);
     });
   };

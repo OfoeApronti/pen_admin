@@ -4,7 +4,7 @@ import EmployeeListRow from './EmployeeListRow';
 
 const EmployeeList=({employees})=> {
   return (
-    <table className="table">
+    <table className="table table-condensed">
       <thead>
         <tr>
           <th>&nbsp;</th>

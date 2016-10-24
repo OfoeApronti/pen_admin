@@ -102,7 +102,7 @@ const ClientForm=({client,onSave,onChange,loading,errors,visitEmployees})=>{
                 value={client.initDate}
                 onChange={onChange}
                 error={errors.initDate}
-                type="text"
+                type="date"
                 />
         </div>
           <div className="col-md-4 col-ms-12">

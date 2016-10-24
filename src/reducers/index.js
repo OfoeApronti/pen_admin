@@ -5,6 +5,7 @@ import clients from './clientReducer';
 import employees from './employeeReducer';
 import fundEvents from './fundEventReducer';
 import users from './userReducer';
+import login from './loginReducer';
 
 const rootReducer=combineReducers({
   courses,
@@ -12,6 +13,7 @@ const rootReducer=combineReducers({
   clients,
   employees,
   fundEvents,
-  users
+  users,
+  login
 });
 export default rootReducer;

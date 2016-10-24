@@ -4,7 +4,7 @@ import FundEventListRow from './FundEventListRow';
 
 const FundEventList=({fundEvents})=> {
   return (
-    <table className="table">
+    <table className="table table-condensed">
       <thead>
         <tr>
           <th>&nbsp;</th>

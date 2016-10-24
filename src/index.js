@@ -11,7 +11,7 @@ import {loadClients} from './actions/clientActions';
 import {loadEmployees} from './actions/employeeActions';
 import './styles/styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
+import '../node_modules/toastr/build/toastr.min.css';
 
 const store=configureStore();
 store.dispatch(loadCourses());
